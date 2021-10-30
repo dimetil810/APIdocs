@@ -2,10 +2,6 @@ openapi: 3.1.0
 info:
   title: TestAPI
   version: '1.0'
-  summary: Stoplight練習用API
-  description: |-
-    Stoplight練習用API
-    　GitHub連携
 servers:
   - url: 'http://localhost:3000'
 paths:
@@ -147,78 +143,6 @@ paths:
                   dateOfBirth: '1996-08-24'
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
-  /menu:
-    get:
-      summary: メニュー取得
-      tags:
-        - menu
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-                  menuName:
-                    type: string
-              examples:
-                example-1:
-                  value:
-                    id: aaa01
-                    menuName: メニュー名
-      operationId: get-menu
-    delete:
-      summary: メニュー削除
-      tags:
-        - menu
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-      operationId: delete-menu
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                id:
-                  type: string
-      description: メニュー削除API
-    post:
-      summary: メニュー登録
-      tags:
-        - menu
-      operationId: post-menu
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                id:
-                  type: string
-                menuName:
-                  type: string
 components:
   schemas:
     User:
@@ -264,20 +188,4 @@ components:
         - lastName
         - email
         - emailVerified
-    Info:
-      title: Info
-      type: object
-      x-tags:
-        - info
-      properties:
-        id:
-          type: string
-    Menu:
-      title: Menu
-      type: object
-      x-tags:
-        - menu
-      properties:
-        id:
-          type: string
-      description: menuデータ
+      x-internal: false
