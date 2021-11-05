@@ -1,0 +1,15 @@
+- name: Generate Client Library w/ the OpenAPITools Generator
+  # You may pin to the exact commit or the version.
+  # uses: openapi-generators/openapitools-generator-action@b6a71e13ab029ddd6acc5e0d4b5e7bbf83b6e46f
+  uses: openapi-generators/openapitools-generator-action@v1.1.1
+  with:
+    # The name of the generator (i.e. the language to generate the client library in) to use e.g. "typescript-angular"
+    generator: 
+    # The Docker tag of the openapitools/openapi-generator-cli image to use.
+    generator-tag: # optional, default is latest
+    # The path to the OpenAPI document to generate a client library for
+    openapi-file: # optional, default is openapi.json
+    # If set, the OpenAPI document will be loaded from this URL instead of openapi-file.
+    openapi-url: # optional, default is UNSET
+    # The path to the config file to be passed along to the OpenAPITools generator
+    config-file: # optional, default is UNSET
