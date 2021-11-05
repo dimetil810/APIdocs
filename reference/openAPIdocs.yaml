@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.0.0
 info:
-  title: TestAPI
+  title: openAPIdocs
   version: '1.0'
 servers:
   - url: 'http://localhost:3000'
@@ -149,8 +149,9 @@ components:
       title: User
       type: object
       description: ''
-      examples:
-        - id: 142
+      x-examples:
+        Alice Smith:
+          id: 142
           firstName: Alice
           lastName: Smith
           email: alice.smith@gmail.com
@@ -179,13 +180,9 @@ components:
           type: string
           format: date
           description: The date that the user was created.
-        status:
-          type: number
-          description: データのステータス
       required:
         - id
         - firstName
         - lastName
         - email
         - emailVerified
-      x-internal: false
