@@ -14,7 +14,7 @@ paths:
         required: true
         description: Id of an existing user.
     get:
-      summary: Get User Info by User ID3
+      summary: Get User Info by User ID4
       tags: []
       responses:
         '200':
