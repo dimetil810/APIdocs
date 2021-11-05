@@ -31,7 +31,7 @@ jobs:
     # openapi generate
     - uses: docker://openapitools/openapi-generator-cli
       with:
-        args: generate -i ./TestAPI.yaml -g spring -o ./out/spring/
+        args: generate -i ./reference/TestAPI.yaml -g spring -o ./out/spring/
 
     # Create pull request
     - uses: peter-evans/create-pull-request@v2
